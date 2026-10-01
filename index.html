@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML・CSS演習 課題ダウンロード</title>
+  <style>
+    :root {
+      --bg: #f6f5f1; --card: #ffffff; --text: #222; --muted: #777;
+      --line: #e4e1d8; --accent: #2f6f5e; --accent-text: #fff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1b1c1e; --card: #25272a; --text: #eee; --muted: #9a9a9a;
+        --line: #36383c; --accent: #5fb39a; --accent-text: #10201b;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text); line-height: 1.6;
+      font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
+    header h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    header p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .chapter { margin-top: 40px; }
+    .chapter h2 { font-size: 1.15rem; margin: 0 0 12px; display: flex; align-items: baseline; gap: 12px; }
+    .chapter h2 span {
+      font-size: .78rem; letter-spacing: .08em; color: var(--accent);
+      border: 1px solid var(--accent); border-radius: 999px; padding: 1px 10px;
+    }
+    ul { list-style: none; margin: 0; padding: 0; background: var(--card);
+         border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    .item { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 14px 18px; }
+    .book { flex-basis: 100%; padding-left: calc(3.2em + 16px); font-size: .85rem; }
+    .book summary { cursor: pointer; color: var(--muted); width: fit-content; }
+    .book summary:hover { color: var(--accent); }
+    .book__links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .book__item {
+      display: inline-flex; background: var(--bg); border: 1px solid var(--line);
+      border-radius: 6px; overflow: hidden; font-variant-numeric: tabular-nums;
+    }
+    .book__item a { text-decoration: none; color: var(--text); padding: 3px 10px; }
+    .book__item a:hover { color: var(--accent); }
+    .book__item .book__dl { border-left: 1px solid var(--line); padding: 3px 8px; color: var(--muted); }
+    .book__all {
+      display: inline-block; margin-top: 10px; color: var(--accent); font-weight: 600; text-decoration: none;
+    }
+    .book__all:hover { text-decoration: underline; }
+    .item + .item { border-top: 1px solid var(--line); }
+    .no { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--accent); min-width: 3.2em; }
+    .name { flex: 1; min-width: 0; color: inherit; text-decoration: none; }
+    .name:hover { color: var(--accent); text-decoration: underline; }
+    .view {
+      flex-shrink: 0; text-decoration: none; color: var(--accent); border: 1px solid var(--accent);
+      font-size: .85rem; font-weight: 600; padding: 6px 14px; border-radius: 8px;
+    }
+    .view:hover { background: var(--accent); color: var(--accent-text); }
+    .name small { display: block; color: var(--muted); font-size: .78rem; }
+    .dl {
+      flex-shrink: 0; text-decoration: none; background: var(--accent); color: var(--accent-text);
+      font-size: .85rem; font-weight: 600; padding: 7px 16px; border-radius: 8px;
+    }
+    .dl:hover { opacity: .85; }
+    .note { margin-top: 40px; font-size: .85rem; color: var(--muted); }
+    @media (max-width: 480px) {
+      .item { flex-wrap: wrap; gap: 4px 12px; }
+      .name { flex-basis: calc(100% - 4.2em); }
+      .view, .dl { flex: 1; text-align: center; margin-top: 6px; }
+      .book { padding-left: 0; margin-top: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>HTML・CSS演習 課題ダウンロード</h1>
+      <p>課題名か「見る」をクリックすると、課題のページ（index.html）が別タブで開きます。「ダウンロード」でzipファイルを保存し、解凍してから使ってください。「教科書の教材を見る」を開くと、その単元の教科書サンプルを見たり（番号をクリック）、ダウンロードしたり（⬇）できます。</p>
+    </header>
+    <section class="chapter">
+      <h2><span>chapter2</span>HTMLの基本</h2>
+      <ul>
+        <li class="item">
+          <span class="no">2-5</span>
+          <a class="name" href="preview/2-5_heading/index.html" target="_blank" rel="noopener">見出しの練習（目次を再現）<small>1ファイル・1 KB</small></a>
+          <a class="view" href="preview/2-5_heading/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/2-5_heading.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（1件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter2/c2-05-1/index.html" target="_blank" rel="noopener">2-05-1</a><a class="book__dl" href="textbook-downloads/c2-05-1.zip" download title="2-05-1 をダウンロード">⬇</a></span></div>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">2-6</span>
+          <a class="name" href="preview/2-6_p/index.html" target="_blank" rel="noopener">pタグ、strongタグ、spanタグについて<small>1ファイル・1 KB</small></a>
+          <a class="view" href="preview/2-6_p/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/2-6_p.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（1件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter2/c2-06-1/index.html" target="_blank" rel="noopener">2-06-1</a><a class="book__dl" href="textbook-downloads/c2-06-1.zip" download title="2-06-1 をダウンロード">⬇</a></span></div>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">2-7</span>
+          <a class="name" href="preview/2-7_img/index.html" target="_blank" rel="noopener">テキスト入力＆画像挿入の練習<small>1ファイル・1 KB</small></a>
+          <a class="view" href="preview/2-7_img/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/2-7_img.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（1件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter2/c2-07-1/index.html" target="_blank" rel="noopener">2-07-1</a><a class="book__dl" href="textbook-downloads/c2-07-1.zip" download title="2-07-1 をダウンロード">⬇</a></span></div>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">2-8</span>
+          <a class="name" href="preview/2-8_a/index.html" target="_blank" rel="noopener">aタグ練習<small>1ファイル・1 KB</small></a>
+          <a class="view" href="preview/2-8_a/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/2-8_a.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（3件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter2/c2-08-1/index.html" target="_blank" rel="noopener">2-08-1</a><a class="book__dl" href="textbook-downloads/c2-08-1.zip" download title="2-08-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-08-2/index.html" target="_blank" rel="noopener">2-08-2</a><a class="book__dl" href="textbook-downloads/c2-08-2.zip" download title="2-08-2 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-08-3/index.html" target="_blank" rel="noopener">2-08-3</a><a class="book__dl" href="textbook-downloads/c2-08-3.zip" download title="2-08-3 をダウンロード">⬇</a></span></div>
+            <a class="book__all" href="textbook-downloads/教科書_2-8_a.zip" download>⬇ この単元の教材をまとめてダウンロード（88 KB）</a>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">2-9</span>
+          <a class="name" href="preview/2-9_ol-ul/index.html" target="_blank" rel="noopener">olとulの使い分け<small>1ファイル・1 KB</small></a>
+          <a class="view" href="preview/2-9_ol-ul/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/2-9_ol-ul.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（2件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter2/c2-09-1/index.html" target="_blank" rel="noopener">2-09-1</a><a class="book__dl" href="textbook-downloads/c2-09-1.zip" download title="2-09-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-09-2/index.html" target="_blank" rel="noopener">2-09-2</a><a class="book__dl" href="textbook-downloads/c2-09-2.zip" download title="2-09-2 をダウンロード">⬇</a></span></div>
+            <a class="book__all" href="textbook-downloads/教科書_2-9_ol-ul.zip" download>⬇ この単元の教材をまとめてダウンロード（1 KB）</a>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">2-10</span>
+          <a class="name" href="preview/2-10_table/index.html" target="_blank" rel="noopener">表の練習<small>1ファイル・2 KB</small></a>
+          <a class="view" href="preview/2-10_table/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/2-10_table.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（4件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter2/c2-10-1/index.html" target="_blank" rel="noopener">2-10-1</a><a class="book__dl" href="textbook-downloads/c2-10-1.zip" download title="2-10-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-10-2/index.html" target="_blank" rel="noopener">2-10-2</a><a class="book__dl" href="textbook-downloads/c2-10-2.zip" download title="2-10-2 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-10-3/index.html" target="_blank" rel="noopener">2-10-3</a><a class="book__dl" href="textbook-downloads/c2-10-3.zip" download title="2-10-3 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-10-4/index.html" target="_blank" rel="noopener">2-10-4</a><a class="book__dl" href="textbook-downloads/c2-10-4.zip" download title="2-10-4 をダウンロード">⬇</a></span></div>
+            <a class="book__all" href="textbook-downloads/教科書_2-10_table.zip" download>⬇ この単元の教材をまとめてダウンロード（1 KB）</a>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">2-11</span>
+          <a class="name" href="preview/2-11_form/index.html" target="_blank" rel="noopener">お問い合わせフォーム<small>1ファイル・1 KB</small></a>
+          <a class="view" href="preview/2-11_form/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/2-11_form.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（10件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter2/c2-11-1/index.html" target="_blank" rel="noopener">2-11-1</a><a class="book__dl" href="textbook-downloads/c2-11-1.zip" download title="2-11-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-11-2/index.html" target="_blank" rel="noopener">2-11-2</a><a class="book__dl" href="textbook-downloads/c2-11-2.zip" download title="2-11-2 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-11-3/index.html" target="_blank" rel="noopener">2-11-3</a><a class="book__dl" href="textbook-downloads/c2-11-3.zip" download title="2-11-3 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-11-4/index.html" target="_blank" rel="noopener">2-11-4</a><a class="book__dl" href="textbook-downloads/c2-11-4.zip" download title="2-11-4 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-11-5/index.html" target="_blank" rel="noopener">2-11-5</a><a class="book__dl" href="textbook-downloads/c2-11-5.zip" download title="2-11-5 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-11-6/index.html" target="_blank" rel="noopener">2-11-6</a><a class="book__dl" href="textbook-downloads/c2-11-6.zip" download title="2-11-6 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-11-7/index.html" target="_blank" rel="noopener">2-11-7</a><a class="book__dl" href="textbook-downloads/c2-11-7.zip" download title="2-11-7 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-11-8/index.html" target="_blank" rel="noopener">2-11-8</a><a class="book__dl" href="textbook-downloads/c2-11-8.zip" download title="2-11-8 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-11-9/index.html" target="_blank" rel="noopener">2-11-9</a><a class="book__dl" href="textbook-downloads/c2-11-9.zip" download title="2-11-9 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter2/c2-11-10/index.html" target="_blank" rel="noopener">2-11-10</a><a class="book__dl" href="textbook-downloads/c2-11-10.zip" download title="2-11-10 をダウンロード">⬇</a></span></div>
+            <a class="book__all" href="textbook-downloads/教科書_2-11_form.zip" download>⬇ この単元の教材をまとめてダウンロード（40 KB）</a>
+          </details>
+        </li>
+      </ul>
+    </section>
+    <section class="chapter">
+      <h2><span>chapter3</span>CSSの基本</h2>
+      <ul>
+        <li class="item">
+          <span class="no">3-4</span>
+          <a class="name" href="preview/3-4_selecta/index.html" target="_blank" rel="noopener">いろんなセレクタの指定のやり方<small>2ファイル・1 KB</small></a>
+          <a class="view" href="preview/3-4_selecta/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/3-4_selecta.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（2件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter3/c3-04-1/index.html" target="_blank" rel="noopener">3-04-1</a><a class="book__dl" href="textbook-downloads/c3-04-1.zip" download title="3-04-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-04-2/index.html" target="_blank" rel="noopener">3-04-2</a><a class="book__dl" href="textbook-downloads/c3-04-2.zip" download title="3-04-2 をダウンロード">⬇</a></span></div>
+            <a class="book__all" href="textbook-downloads/教科書_3-4_selecta.zip" download>⬇ この単元の教材をまとめてダウンロード（1 KB）</a>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">3-5</span>
+          <a class="name" href="preview/3-5_font-deco/index.html" target="_blank" rel="noopener">フォントとテキストの装飾<small>2ファイル・1 KB</small></a>
+          <a class="view" href="preview/3-5_font-deco/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/3-5_font-deco.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（5件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter3/c3-05-1/index.html" target="_blank" rel="noopener">3-05-1</a><a class="book__dl" href="textbook-downloads/c3-05-1.zip" download title="3-05-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-05-2/index.html" target="_blank" rel="noopener">3-05-2</a><a class="book__dl" href="textbook-downloads/c3-05-2.zip" download title="3-05-2 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-05-3/index.html" target="_blank" rel="noopener">3-05-3</a><a class="book__dl" href="textbook-downloads/c3-05-3.zip" download title="3-05-3 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-05-4/index.html" target="_blank" rel="noopener">3-05-4</a><a class="book__dl" href="textbook-downloads/c3-05-4.zip" download title="3-05-4 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-05-5/index.html" target="_blank" rel="noopener">3-05-5</a><a class="book__dl" href="textbook-downloads/c3-05-5.zip" download title="3-05-5 をダウンロード">⬇</a></span></div>
+            <a class="book__all" href="textbook-downloads/教科書_3-5_font-deco.zip" download>⬇ この単元の教材をまとめてダウンロード（4 KB）</a>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">3-6,7</span>
+          <a class="name" href="preview/3-6-7_color/index.html" target="_blank" rel="noopener">疑似クラスの練習<small>2ファイル・1 KB</small></a>
+          <a class="view" href="preview/3-6-7_color/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/3-6-7_color.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（3件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter3/c3-06-1/index.html" target="_blank" rel="noopener">3-06-1</a><a class="book__dl" href="textbook-downloads/c3-06-1.zip" download title="3-06-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-07-1/index.html" target="_blank" rel="noopener">3-07-1</a><a class="book__dl" href="textbook-downloads/c3-07-1.zip" download title="3-07-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-07-2/index.html" target="_blank" rel="noopener">3-07-2</a><a class="book__dl" href="textbook-downloads/c3-07-2.zip" download title="3-07-2 をダウンロード">⬇</a></span></div>
+            <a class="book__all" href="textbook-downloads/教科書_3-6-7_color.zip" download>⬇ この単元の教材をまとめてダウンロード（2 KB）</a>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">3-10</span>
+          <a class="name" href="preview/3-10_fixed-bg/index.html" target="_blank" rel="noopener">背景固定<small>6ファイル・1.8 MB</small></a>
+          <a class="view" href="preview/3-10_fixed-bg/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/3-10_fixed-bg.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（8件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter3/c3-10-1/index.html" target="_blank" rel="noopener">3-10-1</a><a class="book__dl" href="textbook-downloads/c3-10-1.zip" download title="3-10-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-10-2/index.html" target="_blank" rel="noopener">3-10-2</a><a class="book__dl" href="textbook-downloads/c3-10-2.zip" download title="3-10-2 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-10-3/index.html" target="_blank" rel="noopener">3-10-3</a><a class="book__dl" href="textbook-downloads/c3-10-3.zip" download title="3-10-3 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-10-4/index.html" target="_blank" rel="noopener">3-10-4</a><a class="book__dl" href="textbook-downloads/c3-10-4.zip" download title="3-10-4 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-10-5/index.html" target="_blank" rel="noopener">3-10-5</a><a class="book__dl" href="textbook-downloads/c3-10-5.zip" download title="3-10-5 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-10-6/index.html" target="_blank" rel="noopener">3-10-6</a><a class="book__dl" href="textbook-downloads/c3-10-6.zip" download title="3-10-6 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-10-7/index.html" target="_blank" rel="noopener">3-10-7</a><a class="book__dl" href="textbook-downloads/c3-10-7.zip" download title="3-10-7 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-10-8/index.html" target="_blank" rel="noopener">3-10-8</a><a class="book__dl" href="textbook-downloads/c3-10-8.zip" download title="3-10-8 をダウンロード">⬇</a></span></div>
+            <a class="book__all" href="textbook-downloads/教科書_3-10_fixed-bg.zip" download>⬇ この単元の教材をまとめてダウンロード（322 KB）</a>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">3-12</span>
+          <a class="name" href="preview/3-12_content-btn/index.html" target="_blank" rel="noopener">コンテンツ幅とボタンの練習<small>4ファイル・9 KB</small></a>
+          <a class="view" href="preview/3-12_content-btn/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/3-12_content-btn.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（3件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter3/c3-12-1/index.html" target="_blank" rel="noopener">3-12-1</a><a class="book__dl" href="textbook-downloads/c3-12-1.zip" download title="3-12-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-12-2/index.html" target="_blank" rel="noopener">3-12-2</a><a class="book__dl" href="textbook-downloads/c3-12-2.zip" download title="3-12-2 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-12-3/index.html" target="_blank" rel="noopener">3-12-3</a><a class="book__dl" href="textbook-downloads/c3-12-3.zip" download title="3-12-3 をダウンロード">⬇</a></span></div>
+            <a class="book__all" href="textbook-downloads/教科書_3-12_content-btn.zip" download>⬇ この単元の教材をまとめてダウンロード（2 KB）</a>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">3-13</span>
+          <a class="name" href="preview/3-13_line/index.html" target="_blank" rel="noopener">線の練習<small>4ファイル・1.8 MB</small></a>
+          <a class="view" href="preview/3-13_line/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/3-13_line.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（4件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter3/c3-13-1/index.html" target="_blank" rel="noopener">3-13-1</a><a class="book__dl" href="textbook-downloads/c3-13-1.zip" download title="3-13-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-13-2/index.html" target="_blank" rel="noopener">3-13-2</a><a class="book__dl" href="textbook-downloads/c3-13-2.zip" download title="3-13-2 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-13-3/index.html" target="_blank" rel="noopener">3-13-3</a><a class="book__dl" href="textbook-downloads/c3-13-3.zip" download title="3-13-3 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-13-4/index.html" target="_blank" rel="noopener">3-13-4</a><a class="book__dl" href="textbook-downloads/c3-13-4.zip" download title="3-13-4 をダウンロード">⬇</a></span></div>
+            <a class="book__all" href="textbook-downloads/教科書_3-13_line.zip" download>⬇ この単元の教材をまとめてダウンロード（2 KB）</a>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">3-14</span>
+          <a class="name" href="preview/3-14_list-deco/index.html" target="_blank" rel="noopener">リスト装飾の練習<small>4ファイル・1.8 MB</small></a>
+          <a class="view" href="preview/3-14_list-deco/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/3-14_list-deco.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（3件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter3/c3-14-1/index.html" target="_blank" rel="noopener">3-14-1</a><a class="book__dl" href="textbook-downloads/c3-14-1.zip" download title="3-14-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-14-2/index.html" target="_blank" rel="noopener">3-14-2</a><a class="book__dl" href="textbook-downloads/c3-14-2.zip" download title="3-14-2 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-14-3/index.html" target="_blank" rel="noopener">3-14-3</a><a class="book__dl" href="textbook-downloads/c3-14-3.zip" download title="3-14-3 をダウンロード">⬇</a></span></div>
+            <a class="book__all" href="textbook-downloads/教科書_3-14_list-deco.zip" download>⬇ この単元の教材をまとめてダウンロード（3 KB）</a>
+          </details>
+        </li>
+        <li class="item">
+          <span class="no">3-15</span>
+          <a class="name" href="preview/3-15_class-id/index.html" target="_blank" rel="noopener">ID指定の練習<small>4ファイル・1.8 MB</small></a>
+          <a class="view" href="preview/3-15_class-id/index.html" target="_blank" rel="noopener">見る</a>
+          <a class="dl" href="downloads/3-15_class-id.zip" download>ダウンロード</a>
+          <details class="book">
+            <summary>📖 教科書の教材を見る（5件）</summary>
+            <div class="book__links"><span class="book__item"><a href="textbook/chapter3/c3-15-1/index.html" target="_blank" rel="noopener">3-15-1</a><a class="book__dl" href="textbook-downloads/c3-15-1.zip" download title="3-15-1 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-15-2/index.html" target="_blank" rel="noopener">3-15-2</a><a class="book__dl" href="textbook-downloads/c3-15-2.zip" download title="3-15-2 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-15-3/index.html" target="_blank" rel="noopener">3-15-3</a><a class="book__dl" href="textbook-downloads/c3-15-3.zip" download title="3-15-3 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-15-4/index.html" target="_blank" rel="noopener">3-15-4</a><a class="book__dl" href="textbook-downloads/c3-15-4.zip" download title="3-15-4 をダウンロード">⬇</a></span><span class="book__item"><a href="textbook/chapter3/c3-15-5/index.html" target="_blank" rel="noopener">3-15-5</a><a class="book__dl" href="textbook-downloads/c3-15-5.zip" download title="3-15-5 をダウンロード">⬇</a></span></div>
+            <a class="book__all" href="textbook-downloads/教科書_3-15_class-id.zip" download>⬇ この単元の教材をまとめてダウンロード（3 KB）</a>
+          </details>
+        </li>
+      </ul>
+    </section>
+    <p class="note">※ zipを解凍すると課題フォルダが出てきます。VS Codeなどのエディタでフォルダごと開いて作業しましょう。</p>
+  </div>
+</body>
+</html>
